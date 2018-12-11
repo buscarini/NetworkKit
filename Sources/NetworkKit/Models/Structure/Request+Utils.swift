@@ -1,10 +1,3 @@
-//
-//  Request+Utils.swift
-//  Pods-TRNNetworkKit_Example
-//
-//  Created by José Manuel Sánchez Peñarroja on 15/1/18.
-//
-
 import Foundation
 
 public extension Request {

@@ -1,13 +1,6 @@
-//
-//  HTTPResponse.swift
-//  Pods-TRNNetworkKit_Example
-//
-//  Created by José Manuel Sánchez Peñarroja on 15/1/18.
-//
-
 import Foundation
 
-public struct HTTPResponse {
+public struct HTTPResponse: Equatable, Hashable {
 	public var responseCode: Int
 	public var data: Data?
 	public var url: URL
@@ -20,5 +13,3 @@ public struct HTTPResponse {
 		self.headerFields = headerFields
 	}	
 }
-
-extension HTTPResponse: AutoEquatableTRN, AutoHashableTRN { }

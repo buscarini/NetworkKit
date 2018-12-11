@@ -1,10 +1,3 @@
-//
-//  Codable+Utils.swift
-//  Pods-TRNNetworkKit_Example
-//
-//  Created by José Manuel Sánchez Peñarroja on 11/12/2018.
-//
-
 import Foundation
 
 public extension Decodable {

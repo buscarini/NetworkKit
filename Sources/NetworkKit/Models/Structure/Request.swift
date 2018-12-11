@@ -1,14 +1,6 @@
-//
-//  Request.swift
-//  Project
-//
-//  Created by Vicente Crespo on 1/3/17.
-//
-//
-
 import Foundation
 
-public struct Request {
+public struct Request<T> {
     public var method: HTTPMethod
     public var url: RequestUrl
     public var type: RequestType
@@ -31,6 +23,9 @@ public struct Request {
         self.successCodes = successCodes
     }
 
+	func coerce<U>(_ type: U.Type) -> Request<U> {
+		return unsafeBitCast(self, to: Request<U>.self)
+	}
 }
 
 extension Request {

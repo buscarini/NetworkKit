@@ -1,14 +1,6 @@
-//
-//  MultipartFileParameter.swift
-//  Project
-//
-//  Created by Vicente Crespo on 10/8/17.
-//
-//
-
 import Foundation
 
-public struct MultipartFileParameter {
+public struct MultipartFileParameter: Equatable, Hashable {
     public var mimeType: String
     public var fileName: String?
 
@@ -17,5 +9,3 @@ public struct MultipartFileParameter {
         self.fileName = fileName
     }
 }
-
-extension MultipartFileParameter: AutoEquatableTRN, AutoHashableTRN { }

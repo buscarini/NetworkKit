@@ -1,10 +1,3 @@
-//
-//  HTTPResponse+Debug.swift
-//  TRNNetworkKit
-//
-//  Created by Vicente Crespo on 6/2/18.
-//
-
 import Foundation
 
 extension HTTPResponse: CustomDebugStringConvertible {
