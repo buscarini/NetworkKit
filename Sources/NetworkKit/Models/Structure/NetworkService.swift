@@ -6,8 +6,7 @@ public struct NetworkService {
 	public typealias CancelRequest = () -> Void
 	public typealias Progress = (UInt64, UInt64) -> Void
 
-
-	var baseUrl: URL
+	public var baseUrl: URL
 	
 	public var request: (Request<Data>, Log, Progress, CompletionHandler<Data>) -> CancelRequest
 	
