@@ -10,10 +10,10 @@ public struct NetworkService {
 	
 	public var baseUrl: URL
 	
-	public var request: RequestFunction
+	public var performRequest: RequestFunction
 	
-	public init(baseUrl: URL, request: @escaping RequestFunction) {
+	public init(baseUrl: URL, request performRequest: @escaping RequestFunction) {
 		self.baseUrl = baseUrl
-		self.request = request
+		self.performRequest = performRequest
 	}
 }

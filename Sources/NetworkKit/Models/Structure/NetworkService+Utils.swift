@@ -14,7 +14,7 @@ public extension NetworkService {
 		log: @escaping Log,
 		completion: @escaping CompletionHandler<Data>
 		) -> CancelRequest {
-		return self.request(request, log: log, progress: { _, _ in }, completion: completion)
+		return self.performRequest(baseUrl, request, log, { _, _ in }, completion)
 	}
 	
 	@discardableResult
@@ -33,7 +33,7 @@ public extension NetworkService {
 		completion: @escaping CompletionHandler<T>
 		) -> CancelRequest {
 		
-		return self.request(baseUrl, request.coerce(Data.self), log, progress, { networkResponse in
+		return self.performRequest(baseUrl, request.coerce(Data.self), log, progress, { networkResponse in
 			
 			switch networkResponse {
 				
