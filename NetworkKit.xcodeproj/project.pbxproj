@@ -24,7 +24,6 @@
 		OBJ_52 /* Codable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Codable+Utils.swift */; };
 		OBJ_53 /* Data+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Data+Debug.swift */; };
 		OBJ_54 /* HTTPResponse+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* HTTPResponse+Debug.swift */; };
-		OBJ_55 /* Optionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Optionals.swift */; };
 		OBJ_62 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		OBJ_27 /* Codable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+Utils.swift"; sourceTree = "<group>"; };
 		OBJ_28 /* Data+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Debug.swift"; sourceTree = "<group>"; };
 		OBJ_29 /* HTTPResponse+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPResponse+Debug.swift"; sourceTree = "<group>"; };
-		OBJ_30 /* Optionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optionals.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,7 +103,6 @@
 				OBJ_27 /* Codable+Utils.swift */,
 				OBJ_28 /* Data+Debug.swift */,
 				OBJ_29 /* HTTPResponse+Debug.swift */,
-				OBJ_30 /* Optionals.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				OBJ_52 /* Codable+Utils.swift in Sources */,
 				OBJ_53 /* Data+Debug.swift in Sources */,
 				OBJ_54 /* HTTPResponse+Debug.swift in Sources */,
-				OBJ_55 /* Optionals.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

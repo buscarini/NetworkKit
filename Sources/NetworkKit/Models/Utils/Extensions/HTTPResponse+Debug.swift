@@ -17,5 +17,4 @@ extension HTTPResponse: CustomDebugStringConvertible {
         let result = components.joined(separator: "\n")
         return result
     }
-    
 }
