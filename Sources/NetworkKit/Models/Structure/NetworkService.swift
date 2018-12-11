@@ -8,9 +8,9 @@ public struct NetworkService {
 
 	public var baseUrl: URL
 	
-	public var request: (Request<Data>, Log, Progress, CompletionHandler<Data>) -> CancelRequest
+	public var request: (URL, Request<Data>, Log, Progress, CompletionHandler<Data>) -> CancelRequest
 	
-	public init(baseUrl: URL, request: @escaping (Request<Data>, Log, Progress, CompletionHandler<Data>) -> CancelRequest) {
+	public init(baseUrl: URL, request: @escaping (URL, Request<Data>, Log, Progress, CompletionHandler<Data>) -> CancelRequest) {
 		self.baseUrl = baseUrl
 		self.request = request
 	}
@@ -22,7 +22,7 @@ public struct NetworkService {
 		completion: @escaping CompletionHandler<T>
 	) -> CancelRequest {
 		
-		return self.request(request.coerce(Data.self), log, progress, { networkResponse in
+		return self.request(baseUrl, request.coerce(Data.self), log, progress, { networkResponse in
 			
 			switch networkResponse {
 				
