@@ -23,7 +23,7 @@ public struct Request<T> {
         self.successCodes = successCodes
     }
 
-	func coerce<U>(_ type: U.Type) -> Request<U> {
+	public func coerce<U>(_ type: U.Type) -> Request<U> {
 		return unsafeBitCast(self, to: Request<U>.self)
 	}
 }
