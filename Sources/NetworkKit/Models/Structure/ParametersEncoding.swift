@@ -3,7 +3,7 @@ import Foundation
 public enum ParametersEncoding {
     case url
     case json
-	case other((URLRequest, [String: Any]) -> URLRequest)
+	case other((URLRequest, [String: Any]) throws -> URLRequest)
 }
 
 extension ParametersEncoding: Equatable {
