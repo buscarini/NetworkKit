@@ -7,7 +7,7 @@ public struct Request<T> {
     public var timeout: TimeInterval
     public var headers: [String: String]?
     public var successCodes: Range<Int>
-	public var extraUrlComponents: URLComponents?
+	public var extraQueryItems: [URLQueryItem]
 
     public init(
         method: HTTPMethod = .get,
@@ -16,7 +16,7 @@ public struct Request<T> {
         timeout: TimeInterval = 50,
         headers: [String: String]? = nil,
         successCodes: Range<Int> = 200 ..< 300,
-		extraUrlComponents: URLComponents? = nil // For post requests with also a url query
+		extraQueryItems: [URLQueryItem] = [] // For post requests with also a url query
 	) {
         self.method = method
         self.url = url
@@ -24,7 +24,7 @@ public struct Request<T> {
         self.timeout = timeout
         self.headers = headers
         self.successCodes = successCodes
-		self.extraUrlComponents = extraUrlComponents
+		self.extraQueryItems = extraQueryItems
     }
 
 	public func coerce<U>(_ type: U.Type) -> Request<U> {
