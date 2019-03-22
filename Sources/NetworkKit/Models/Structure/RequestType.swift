@@ -2,7 +2,6 @@ import Foundation
 
 public enum RequestType {
     case request(parameters: [String: AnyHashable]?, parametersEncoding: ParametersEncoding)
-	case requestArray([AnyHashable]?, parametersEncoding: ParametersEncoding)
     case uploadMultipartData(parameters: [String: MultipartParameter])
 
     public static var `default`: RequestType {
@@ -16,9 +15,6 @@ extension RequestType: Equatable {
         switch (left, right) {
         case (.request(let p1, let e1), .request(let p2, let e2)):
             return p1 == p2 && e1 == e2
-		case (.requestArray(let p1, let e1), .requestArray(let p2, let e2)):
-			return p1 == p2 && e1 == e2
-			
         case (.uploadMultipartData(let p1), .uploadMultipartData(let p2)):
             return p1 == p2
         default:
@@ -35,10 +31,7 @@ extension RequestType {
             let paramsHash = params?.hashValue ?? 0
 
             return "request \(paramsHash) \(encoding.hashValue)".hashValue
-		case .requestArray(let params, let encoding):
-			let paramsHash = params?.hashValue ?? 0
-			return "requestArray \(paramsHash) \(encoding.hashValue)".hashValue
-		case .uploadMultipartData(let params):
+        case .uploadMultipartData(let params):
             return "uploadMultipart \(params.hashValue)".hashValue
         }
     }
