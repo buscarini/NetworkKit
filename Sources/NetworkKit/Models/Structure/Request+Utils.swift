@@ -1,7 +1,7 @@
 import Foundation
 
 public extension Request {
-	public func description(_ baseUrl: URL) -> String {
+	func description(_ baseUrl: URL) -> String {
 		let url = fullUrl(baseUrl: baseUrl)
 		return [
 			"method: \(method)",

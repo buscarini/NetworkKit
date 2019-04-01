@@ -18,7 +18,7 @@ public extension Decodable {
 		}
 	}
 	
-	public static func data(from item: Any?) -> Data? {
+	static func data(from item: Any?) -> Data? {
 		switch item {
 		case let data as Data:
 			return data

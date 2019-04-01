@@ -26,7 +26,7 @@ public extension NetworkService {
 		return self.request(request, log: log, progress: { _, _ in }, completion: completion)
 	}
 	
-	public func request<T: Decodable>(
+	func request<T: Decodable>(
 		_ request: Request<T>,
 		log: @escaping Log,
 		progress: @escaping Progress,

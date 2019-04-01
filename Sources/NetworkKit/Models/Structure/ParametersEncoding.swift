@@ -22,14 +22,15 @@ extension ParametersEncoding: Equatable {
 }
 
 extension ParametersEncoding: Hashable {
-	public var hashValue: Int {
+	
+	public func hash(into hasher: inout Hasher) {
 		switch self {
 		case .url:
-			return "url".hashValue
+			hasher.combine("url")
 		case .json:
-			return "json".hashValue
+			hasher.combine("json")
 		case .other:
-			return "other".hashValue
+			hasher.combine("other")
 		}
 	}
 }

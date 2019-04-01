@@ -13,7 +13,7 @@ public enum Result<T, E: Error> {
 }
 
 public extension Result {
-	public func map<U>(_ f: (T) -> U) -> Result<U, E> {
+	func map<U>(_ f: (T) -> U) -> Result<U, E> {
 		switch self {
 			case .success(let t):
 				return .success(f(t))
@@ -22,7 +22,7 @@ public extension Result {
 		}
 	}
 	
-	public func mapError<F: Error>(_ f: (E) -> F) -> Result<T, F> {
+	func mapError<F: Error>(_ f: (E) -> F) -> Result<T, F> {
 		switch self {
 			case .success(let t):
 				return .success(t)

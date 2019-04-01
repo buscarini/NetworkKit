@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 
 import PackageDescription
 
@@ -12,6 +12,5 @@ let package = Package(
   targets: [
     .target(name: "NetworkKit", dependencies: []),
     .testTarget(name: "NetworkKitTests", dependencies: ["NetworkKit"]),
-    ],
-   swiftLanguageVersions: [.v4_2]
+    ]
 )
