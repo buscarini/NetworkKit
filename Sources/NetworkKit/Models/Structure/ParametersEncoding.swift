@@ -1,8 +1,8 @@
 import Foundation
 
 public enum ParametersEncoding {
-    case url
-    case json
+	case url
+	case json
 	case other((URLRequest, [String: Any]) throws -> URLRequest)
 }
 
