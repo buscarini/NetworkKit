@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NetworkKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.3'
   s.summary          = 'Swift library for improving REST network calls'
 
   s.description      = <<-DESC
