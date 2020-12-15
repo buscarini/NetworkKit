@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AC1A37DF21C912CF00B0D3BE /* Request+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1A37DE21C912CF00B0D3BE /* Request+Constants.swift */; };
 		AC21AF4021BFBA100028EE64 /* NetworkService+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC21AF3F21BFBA100028EE64 /* NetworkService+Utils.swift */; };
+		AC277F5E25891F8D0067DC7A /* Request+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC277F5D25891F8D0067DC7A /* Request+Creation.swift */; };
 		OBJ_39 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ResponseError.swift */; };
 		OBJ_40 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* HTTPMethod.swift */; };
 		OBJ_41 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* HTTPResponse.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		AC1A37DE21C912CF00B0D3BE /* Request+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Constants.swift"; sourceTree = "<group>"; };
 		AC21AF3F21BFBA100028EE64 /* NetworkService+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Utils.swift"; sourceTree = "<group>"; };
+		AC277F5D25891F8D0067DC7A /* Request+Creation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Creation.swift"; sourceTree = "<group>"; };
 		"NetworkKit::NetworkKit::Product" /* NetworkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		OBJ_13 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				OBJ_19 /* ParametersEncoding.swift */,
 				OBJ_20 /* Request+Utils.swift */,
 				OBJ_21 /* Request.swift */,
+				AC277F5D25891F8D0067DC7A /* Request+Creation.swift */,
 				OBJ_22 /* RequestType.swift */,
 				AC1A37DE21C912CF00B0D3BE /* Request+Constants.swift */,
 				OBJ_23 /* RequestUrl.swift */,
@@ -233,6 +236,7 @@
 			files = (
 				OBJ_39 /* ResponseError.swift in Sources */,
 				OBJ_40 /* HTTPMethod.swift in Sources */,
+				AC277F5E25891F8D0067DC7A /* Request+Creation.swift in Sources */,
 				OBJ_41 /* HTTPResponse.swift in Sources */,
 				OBJ_42 /* MultipartFileParameter.swift in Sources */,
 				OBJ_43 /* MultipartParameter.swift in Sources */,

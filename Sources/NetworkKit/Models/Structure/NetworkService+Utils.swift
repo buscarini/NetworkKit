@@ -13,8 +13,8 @@ public extension NetworkService {
 		_ request: Request<Data>,
 		log: @escaping Log,
 		completion: @escaping CompletionHandler<Data>
-		) -> CancelRequest {
-		return self.performRequest(baseUrl, request, log, { _, _ in }, completion)
+	) -> CancelRequest {
+		self.performRequest(baseUrl, request, log, { _, _ in }, completion)
 	}
 	
 	@discardableResult
@@ -22,8 +22,8 @@ public extension NetworkService {
 		_ request: Request<T>,
 		log: @escaping Log,
 		completion: @escaping CompletionHandler<T>
-		) -> CancelRequest {
-		return self.request(request, log: log, progress: { _, _ in }, completion: completion)
+	) -> CancelRequest {
+		self.request(request, log: log, progress: { _, _ in }, completion: completion)
 	}
 	
 	func request<T: Decodable>(
@@ -31,12 +31,11 @@ public extension NetworkService {
 		log: @escaping Log,
 		progress: @escaping Progress,
 		completion: @escaping CompletionHandler<T>
-		) -> CancelRequest {
-		
-		return self.performRequest(baseUrl, request.coerce(Data.self), log, progress, { networkResponse in
+	) -> CancelRequest {
+		self.performRequest(baseUrl, request.coerce(Data.self), log, progress, { networkResponse in
 			
 			switch networkResponse {
-				
+			
 			case .success(let data, let response):
 				do {
 					let dataParsed = try T.parse(from: data)

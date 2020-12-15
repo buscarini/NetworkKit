@@ -3,30 +3,30 @@ import Foundation
 public struct Request<T> {
 	public var method: HTTPMethod
 	public var url: RequestUrl
+	public var queryItems: [URLQueryItem]
 	public var type: RequestType
 	public var timeout: TimeInterval
 	public var headers: [String: String]?
 	public var successCodes: Range<Int>
-	public var extraQueryItems: [URLQueryItem]
 	public var cachePolicy: URLRequest.CachePolicy
 	
 	public init(
 		method: HTTPMethod = .get,
 		url: RequestUrl,
+		queryItems: [URLQueryItem] = [],
 		type: RequestType = RequestType.default,
 		timeout: TimeInterval = 50,
 		headers: [String: String]? = nil,
 		successCodes: Range<Int> = 200 ..< 300,
-		extraQueryItems: [URLQueryItem] = [], // For post requests with also a url query
 		cachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy
 	) {
 		self.method = method
 		self.url = url
+		self.queryItems = queryItems
 		self.type = type
 		self.timeout = timeout
 		self.headers = headers
 		self.successCodes = successCodes
-		self.extraQueryItems = extraQueryItems
 		self.cachePolicy = cachePolicy
 	}
 	
