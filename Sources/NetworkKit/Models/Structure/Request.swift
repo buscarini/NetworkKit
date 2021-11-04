@@ -39,7 +39,16 @@ extension Request {
 	public func fullUrl(baseUrl: URL) -> URL {
 		switch self.url {
 		case .endpoint(let endpoint):
-			return baseUrl.appendingPathComponent(endpoint)
+			
+			var baseString = baseUrl.absoluteString
+			if baseString.last != "/" && endpoint.first != "/" {
+				baseString.append("/")
+			}
+			
+			baseString.append(endpoint)
+			return URL(string: baseString)
+				?? baseUrl.appendingPathComponent(endpoint)
+			
 		case .full(let full):
 			return full
 		}
