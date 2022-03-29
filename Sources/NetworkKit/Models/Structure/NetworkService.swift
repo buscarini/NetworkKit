@@ -11,7 +11,7 @@ public struct NetworkService {
 	public var baseUrl: URL
 	
 	public var performRequest: RequestFunction
-	
+		
 	public init(baseUrl: URL, request performRequest: @escaping RequestFunction) {
 		self.baseUrl = baseUrl
 		self.performRequest = performRequest
